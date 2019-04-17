@@ -17,7 +17,7 @@
     <div class="govuk-width-container">
       <div class="govuk-heading-m">
         <h3 id="heading-{{ exampleSlug }}" class="app-!-di">{{ heading | safe }}</h3>
-        <a href="{{ path }}" class="govuk-link govuk-!-margin-left-1 govuk-!-font-size-16">
+        <a href="{{ path }}{{ legacy_query }}" class="govuk-link govuk-!-margin-left-1 govuk-!-font-size-16">
           (open in a new window)
         </a>
       </div>
@@ -31,7 +31,7 @@
     <div class="app-component-preview">
       <iframe
       class="js-component-preview app-component-preview__iframe"
-      src="{{ path }}?iframe=true"
+      src="{{ path }}?{{ legacy_query }}iframe=true"
       frameBorder="0"
       allowTransparency="true"
       scrolling="auto"
