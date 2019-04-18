@@ -13,7 +13,14 @@
 /// @throw if `$colour` is not a colour from the colour palette
 /// @access public
 
-@function govuk-colour($colour) {
+@function govuk-colour($colour, $legacy: false) {
+  @if ($govuk-use-legacy-palette and $legacy) {
+    @if (type-of($legacy) == "color") {
+      @return $legacy;
+    }
+    $colour: $legacy;
+  }
+
   $colour: quote($colour);
 
   @if not map-has-key($govuk-colours, $colour) {

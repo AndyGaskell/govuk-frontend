@@ -92,7 +92,8 @@
 
     // Section headers have a grey background on hover as an additional affodance
     .govuk-accordion__section-header:hover {
-      background-color: govuk-colour("grey-4");
+      box-shadow: inset 0 3px 0 0 govuk-colour("light-blue");
+
       // For devices that can't hover such as touch devices,
       // remove hover state as it can be stuck in that state (iOS).
       @media (hover: none) {
